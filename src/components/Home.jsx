@@ -20,7 +20,7 @@ const Home = () => {
         I'm a Software Developer.
       </h2>
       <p className='text-[#8892b0] py-4 max-w-[700px]'>
-        I’m a Software developer with fullstack proficiency specializing in building exceptional digital user interfaces, 
+        I’m a Software developer with fullstack proficiency specialized in building exceptional digital user interfaces, 
         user experiences & web functionalities leveraging fullstack knowledge.
       </p>
       <div>
