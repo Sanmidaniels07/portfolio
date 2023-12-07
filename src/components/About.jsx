@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div name="about" className="w-full h-screen bg-[#0a192f] text-gray-300">
       <div className="flex flex-col justify-center items-center w-full h-full">
-        <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
+        <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8 mt-[200px] sm:mt-0">
           <div className="sm:text-right pb-8 pl-4">
             <p className="text-4xl font-bold inline border-b-4 border-pink-600">
               About
@@ -19,10 +19,9 @@ const About = () => {
           <div>
             <p>
               I am passionate about building excellent software that improves
-              the lives of those around me. I specialize in creating software
-              for clients ranging from individuals and small-business all the
-              way to large enterprise corporations. What would you do if you had
-              a software expert available at your fingertips
+              the lives of those around me. I specialize in creating user interfaces,
+              testing, debugging with proven ability in optimizing web functionalities that improves 
+              user experiences and workflow efficiencies leveraging fullstack knowledge. 
             </p>
           </div>
         </div>

@@ -1,18 +1,18 @@
-import countriesapi from '../assets/projects/countriesapi.jpg'
 import Ecommerce from '../assets/projects/e-commerce.jpg'
 import invoice from '../assets/projects/invoice.jpg'
 import AI from '../assets/projects/AI.jpg'
 import business from '../assets/projects/business.jpg'
 import restaurant from '../assets/projects/restaurant.jpg'
+import AdminDashboard from '../assets/projects/Admin-dashboard.jpg'
 
 
 export const data=[
     {
         id:1,
-        name:"RestFul Countries API App",
-        image:countriesapi,
-        github:"https://github.com/Sanmidaniels07/countries-RestfulApi",
-        live:"https://countries-restfulapi.netlify.app/",
+        name:"Responsive Admin Dashboard",
+        image:AdminDashboard,
+        github:"https://github.com/Sanmidaniels07/Admin-Dashboard.git",
+        live:"https://admin-dashboard-eight-eosin.vercel.app/",
     },
     {
         id:2,
