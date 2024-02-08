@@ -1,9 +1,9 @@
 import Ecommerce from '../assets/projects/e-commerce.jpg'
-import invoice from '../assets/projects/invoice.jpg'
 import AI from '../assets/projects/AI.jpg'
 import business from '../assets/projects/business.jpg'
 import restaurant from '../assets/projects/restaurant.jpg'
 import AdminDashboard from '../assets/projects/Admin-dashboard.jpg'
+import cis from '../assets/projects/cis.jpg'
 
 
 export const data=[
@@ -23,10 +23,10 @@ export const data=[
     },
     {
         id:3,
-        name:"CRUD Invoice Application",
-        image:invoice,
-        github:"https://github.com/Sanmidaniels07/Invoice-app-MERN-",
-        live:"https://vercel.com/sanmidaniels07/invoice-app-mern-jyu5",
+        name:"CIS WEB",
+        image:cis,
+        github:"https://github.com/Sanmidaniels07/TPS-wEB.git",
+        live:"https://cisltd.com/",
     },
     {
         id:4,
