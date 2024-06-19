@@ -1,9 +1,10 @@
 import Ecommerce from '../assets/projects/e-commerce.jpg'
 import AI from '../assets/projects/AI.jpg'
 import business from '../assets/projects/business.jpg'
-import restaurant from '../assets/projects/restaurant.jpg'
+// import restaurant from '../assets/projects/restaurant.jpg'
 import AdminDashboard from '../assets/projects/Admin-dashboard.jpg'
 import cis from '../assets/projects/cis.jpg'
+import evea from '../assets/projects/evea.jpg'
 
 
 export const data=[
@@ -47,11 +48,12 @@ export const data=[
 
     {
         id:6,
-        name:"Restaurant Landing Page",
-        image:restaurant,
-        github:"https://github.com/Sanmidaniels07/Geritch-Restaurant",
-        live:"https://app.netlify.com/sites/gericht-restaurantpage/",
+        name:"Evea",
+        image:evea,
+        github:"https://github.com/Evea01/Frontend",
+        live:"https://evea-dev.evea.africa/",
     },
+
 
 
 
