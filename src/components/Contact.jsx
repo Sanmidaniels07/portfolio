@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Contact = () => {
   const [focused, setFocused] = useState(null);
-  const [sent, setSent] = useState(false);
+  const [sent, ] = useState(false);
 
   const inputClass = (name) =>
     `w-full bg-white/5 border ${

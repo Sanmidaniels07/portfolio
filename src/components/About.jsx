@@ -26,9 +26,14 @@ const About = () => {
           transition={{ duration: 0.5 }}
           className="flex items-center gap-4 mb-16"
         >
-          <span className="text-pink-500 text-sm font-mono tracking-widest uppercase">02.</span>
+          <span className="text-pink-500 text-sm font-mono tracking-widest uppercase">
+            02.
+          </span>
           <h2 className="text-4xl sm:text-5xl font-black text-white">
-            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-400">Me</span>
+            About{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-400">
+              Me
+            </span>
           </h2>
           <div className="flex-1 h-[1px] bg-gradient-to-r from-zinc-700 to-transparent" />
         </motion.div>
@@ -55,10 +60,10 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-zinc-400 text-base leading-relaxed mb-5"
             >
-              Hey, I'm Daniel — a Software Engineer who lives at the intersection
-              of clean code and stunning interfaces. I'm primarily a
-              frontend engineer who genuinely enjoys the craft of building things
-              that look great and work even better.
+              Hey, I'm Daniel — a Software Engineer who lives at the
+              intersection of clean code and stunning interfaces. I'm primarily
+              a frontend engineer who genuinely enjoys the craft of building
+              things that look great and work even better.
             </motion.p>
 
             <motion.p
@@ -70,9 +75,10 @@ const About = () => {
             >
               My backend experience means I understand how everything fits
               together — from API design to database schemas — so I can
-              collaborate effectively across the stack and make smarter decisions
-              at every layer. I care deeply about performance, accessibility, and
-              the small details that make a product feel truly polished.
+              collaborate effectively across the stack and make smarter
+              decisions at every layer. I care deeply about performance,
+              accessibility, and the small details that make a product feel
+              truly polished.
             </motion.p>
 
             <motion.ul
@@ -114,7 +120,9 @@ const About = () => {
                   <p className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-rose-500">
                     {s.value}
                   </p>
-                  <p className="text-zinc-400 text-xs mt-1 leading-tight">{s.label}</p>
+                  <p className="text-zinc-400 text-xs mt-1 leading-tight">
+                    {s.label}
+                  </p>
                 </div>
               ))}
             </motion.div>
@@ -128,15 +136,15 @@ const About = () => {
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-600 via-rose-400 to-cyan-500" />
               <p className="text-zinc-300 text-sm font-mono text-center mb-1 text-pink-400">
-                // philosophy
+                {"// philosophy"}
               </p>
               <p className="text-white text-lg font-bold text-center leading-snug">
-                "Great software is never just functional —
-                it's <span className="text-pink-400">delightful</span>."
+                "Great software is never just functional — it's{" "}
+                <span className="text-pink-400">delightful</span>."
               </p>
               <p className="text-zinc-500 text-sm text-center mt-3">
-                I believe every interaction is an opportunity to make someone's day a
-                little better.
+                I believe every interaction is an opportunity to make someone's
+                day a little better.
               </p>
             </motion.div>
           </div>

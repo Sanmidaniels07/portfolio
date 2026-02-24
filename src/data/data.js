@@ -1,7 +1,5 @@
-import Ecommerce from '../assets/projects/e-commerce.jpg'
 import AI from '../assets/projects/AI.jpg'
 import business from '../assets/projects/business.jpg'
-// import restaurant from '../assets/projects/restaurant.jpg'
 import AdminDashboard from '../assets/projects/Admin-dashboard.jpg'
 import cis from '../assets/projects/cis.jpg'
 import evea from '../assets/projects/evea.jpg'
@@ -41,7 +39,7 @@ export const data=[
     },
 
     {
-        id:1,
+        id:5,
         name:"Responsive Admin Dashboard",
         image:AdminDashboard,
         github:"https://github.com/Sanmidaniels07/Admin-Dashboard.git",
@@ -50,7 +48,7 @@ export const data=[
 
    
     {
-        id:5,
+        id:6,
         name:"Business Application",
         image:business,
         github:"https://github.com/Sanmidaniels07/CourseList-withZustand",
@@ -58,7 +56,7 @@ export const data=[
     },
 
     {
-        id:6,
+        id:7,
         name:"Evea",
         image:evea,
         github:"https://github.com/Evea01/Frontend",
