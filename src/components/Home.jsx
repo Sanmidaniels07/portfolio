@@ -7,7 +7,7 @@ import { Link } from "react-scroll";
 const roles = [
   "Frontend Engineer",
   "UI/UX Craftsman",
-  "Fullstack Developer",
+  "Fullstack Knowledge",
   "React Specialist",
 ];
 
@@ -45,14 +45,12 @@ const Home = () => {
 
   return (
     <div name="home" className="w-full min-h-screen flex items-center relative overflow-hidden">
-      {/* Ambient blobs */}
       <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-pink-600/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-6 sm:px-12 w-full pt-28 pb-16">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
           
-          {/* Text Content */}
           <div className="flex-1 order-2 lg:order-1">
             <motion.p
               initial={{ opacity: 0, x: -30 }}
@@ -125,9 +123,7 @@ const Home = () => {
             className="order-1 lg:order-2 flex-shrink-0"
           >
             <div className="relative w-56 h-56 sm:w-72 sm:h-72">
-              {/* Rotating ring */}
               <div className="absolute inset-0 rounded-full border-2 border-dashed border-pink-500/40 animate-spin-slow" style={{ animationDuration: "12s" }} />
-              {/* Glow */}
               <div className="absolute inset-2 rounded-full bg-gradient-to-br from-pink-600/20 to-cyan-500/20 blur-xl" />
               <motion.img
                 src={profilePix}
@@ -136,14 +132,13 @@ const Home = () => {
                 animate={{ y: [0, -12, 0] }}
                 transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
               />
-              {/* Stat badges */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1.2 }}
                 className="absolute -right-4 top-8 bg-[#1a1a1a] border border-white/10 rounded-xl px-3 py-2 text-center shadow-xl backdrop-blur"
               >
-                <p className="text-pink-400 font-black text-lg leading-none">3+</p>
+                <p className="text-pink-400 font-black text-lg leading-none">5+</p>
                 <p className="text-zinc-400 text-xs mt-0.5">Years Exp.</p>
               </motion.div>
               <motion.div
@@ -159,7 +154,6 @@ const Home = () => {
           </motion.div>
         </div>
 
-        {/* Scroll indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

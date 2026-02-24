@@ -4,7 +4,6 @@ import CSS from "../assets/css.png";
 import Javascript from "../assets/javascript.png";
 import ReactImg from "../assets/react.png";
 import Node from "../assets/node.png";
-import Firebase from "../assets/firebase.png";
 import Tailwind from "../assets/tailwind.png";
 import Mongo from "../assets/mongo.png";
 import Typescript from "../assets/typescriptLogo.png";
@@ -12,18 +11,17 @@ import Nextjs from "../assets/nextjs.png";
 
 const frontendSkills = [
   { name: "HTML5", icon: HTML, level: 95 },
-  { name: "CSS3", icon: CSS, level: 90 },
+  { name: "CSS3", icon: CSS, level: 95 },
   { name: "JavaScript", icon: Javascript, level: 92 },
-  { name: "TypeScript", icon: Typescript, level: 78 },
+  { name: "TypeScript", icon: Typescript, level: 85 },
   { name: "React", icon: ReactImg, level: 90 },
   { name: "Next.js", icon: Nextjs, level: 80 },
-  { name: "Tailwind", icon: Tailwind, level: 88 },
+  { name: "Tailwind", icon: Tailwind, level: 95 },
 ];
 
 const backendSkills = [
   { name: "Node.js", icon: Node, level: 72 },
   { name: "MongoDB", icon: Mongo, level: 68 },
-  { name: "Firebase", icon: Firebase, level: 70 },
 ];
 
 const SkillCard = ({ name, icon, level, index }) => (
@@ -37,7 +35,6 @@ const SkillCard = ({ name, icon, level, index }) => (
   >
     <img src={icon} alt={name} className="w-14 h-14 object-contain group-hover:scale-110 transition-transform duration-300" />
     <p className="text-zinc-300 text-sm font-semibold tracking-wide">{name}</p>
-    {/* Proficiency bar */}
     <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden">
       <motion.div
         initial={{ width: 0 }}

@@ -7,7 +7,7 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import { BsFillPersonLinesFill } from "react-icons/bs";
+// import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -38,12 +38,12 @@ const socials = [
     href: "mailto:sanmidaniels07@gmail.com",
     color: "from-pink-600 to-rose-500",
   },
-  {
-    label: "Resume",
-    icon: <BsFillPersonLinesFill size={22} />,
-    href: "https://drive.google.com/file/d/1nnw88a8hMfpdqePSW5Y1GvZYLBxfuQAr/view?usp=drive_link",
-    color: "from-teal-600 to-cyan-500",
-  },
+  // {
+  //   label: "Resume",
+  //   icon: <BsFillPersonLinesFill size={22} />,
+  //   href: "https://drive.google.com/file/d/1nnw88a8hMfpdqePSW5Y1GvZYLBxfuQAr/view?usp=drive_link",
+  //   color: "from-teal-600 to-cyan-500",
+  // },
 ];
 
 const Navbar = () => {
