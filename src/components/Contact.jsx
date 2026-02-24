@@ -147,7 +147,6 @@ const Contact = () => {
           </motion.div>
         </div>
 
-        {/* Footer */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -156,8 +155,7 @@ const Contact = () => {
           className="text-center mt-24 pt-8 border-t border-white/5"
         >
           <p className="text-zinc-600 text-xs">
-            Designed & built by{" "}
-            <span className="text-pink-500 font-medium">Daniel Omowole</span> · {new Date().getFullYear()}
+            <span className="text-pink-500 font-medium">Daniel Sanmi Omowole</span> · {new Date().getFullYear()}
           </p>
         </motion.div>
       </div>
