@@ -7,9 +7,10 @@ const stats = [
 ];
 
 const highlights = [
-  "Frontend-first mindset with full-stack capability",
+  "Full-stack engineer — frontend-first, backend-capable",
   "React, Next.js & TypeScript specialist",
-  "Node.js, MongoDB & REST API experience",
+  "Node.js, Express & REST API development",
+  "PostgreSQL, Prisma ORM & database architecture",
   "Performance-driven, accessibility-aware",
 ];
 
@@ -60,10 +61,11 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-zinc-400 text-base leading-relaxed mb-5"
             >
-              Hey, I'm Daniel — a Software Engineer who lives at the
-              intersection of clean code and stunning interfaces. I'm primarily
-              a frontend engineer who genuinely enjoys the craft of building
-              things that look great and work even better.
+              Hey, I'm Daniel — a Full-Stack Software Engineer who lives at the
+              intersection of clean code and stunning interfaces. I started as a
+              frontend engineer and have grown into the backend, building
+              production REST APIs, authentication systems, and database-driven
+              platforms that power real products used by real people.
             </motion.p>
 
             <motion.p
@@ -73,12 +75,15 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-zinc-400 text-base leading-relaxed mb-8"
             >
-              My backend experience means I understand how everything fits
-              together — from API design to database schemas — so I can
-              collaborate effectively across the stack and make smarter
-              decisions at every layer. I care deeply about performance,
-              accessibility, and the small details that make a product feel
-              truly polished.
+              On the backend, I work with Node.js, Express, Prisma ORM, and
+              PostgreSQL to design scalable APIs, manage database schemas, and
+              implement secure authentication flows including JWT, refresh
+              tokens, and email verification. On the frontend, I bring that same
+              engineering rigour to React and Next.js applications — writing
+              TypeScript, managing complex state, and integrating APIs
+              seamlessly. Understanding both sides of the stack means I make
+              smarter decisions at every layer and collaborate effectively with
+              any team.
             </motion.p>
 
             <motion.ul
