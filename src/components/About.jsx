@@ -75,15 +75,17 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-zinc-400 text-base leading-relaxed mb-8"
             >
-              On the backend, I work with Node.js, Express, Prisma ORM, and
-              PostgreSQL to design scalable APIs, manage database schemas, and
-              implement secure authentication flows including JWT, refresh
-              tokens, and email verification. On the frontend, I bring that same
-              engineering rigour to React and Next.js applications — writing
-              TypeScript, managing complex state, and integrating APIs
-              seamlessly. Understanding both sides of the stack means I make
-              smarter decisions at every layer and collaborate effectively with
-              any team.
+              My backend experience means I understand how everything fits
+              together — from API design to database schemas — so I can
+              collaborate effectively across the stack and make smarter
+              decisions at every layer. I care deeply about performance,
+              accessibility, and the small details that make a product feel
+              truly polished.On the frontend, I bring that same engineering
+              rigour to React and Next.js applications — writing TypeScript,
+              managing complex state, and integrating APIs seamlessly.
+              Understanding both sides of the stack means I make smarter
+              decisions at every layer and collaborate effectively with any
+              team.
             </motion.p>
 
             <motion.ul
