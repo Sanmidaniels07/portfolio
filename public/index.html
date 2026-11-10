@@ -5,7 +5,18 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#f7f7fb" />
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("dark");
+            document.querySelector("meta[name=theme-color]").setAttribute("content", "#0d0d0d");
+          }
+        } catch (e) {}
+      })();
+    </script>
     <meta
       name="description"
       content="Daniel Omowole - full-stack software engineer (React, Next.js, TypeScript, Node.js, PostgreSQL). Builder of Nestly, a social marketplace app, and products for Evea, CIPMN and more."

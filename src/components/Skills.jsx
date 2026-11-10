@@ -20,18 +20,18 @@ const frontendSkills = [
   { name: "JavaScript", icon: Javascript },
   { name: "TypeScript", icon: Typescript },
   { name: "React", icon: ReactImg },
-  { name: "Next.js", icon: Nextjs },
+  { name: "Next.js", icon: Nextjs, mono: true },
   { name: "Tailwind", icon: Tailwind },
 ];
 
 const backendSkills = [
   { name: "Node.js", icon: Node },
-  { name: "Express.js", icon: Express },
+  { name: "Express.js", icon: Express, mono: true },
   { name: "PostgreSQL", icon: PostgreSQL },
-  { name: "Prisma ORM", icon: Prisma },
+  { name: "Prisma ORM", icon: Prisma, mono: true },
   { name: "Supabase", icon: Supabase },
-  { name: "REST APIs", icon: Api },
-  { name: "Git", icon: Git },
+  { name: "REST APIs", icon: Api, mono: true },
+  { name: "Git", icon: Git, mono: true },
 ];
 
 // Everything else from the CV, as tags.
@@ -41,21 +41,21 @@ const otherTools = [
   "Paystack", "Cloudinary", "Unit & E2E Testing", "CI/CD", "SEO",
 ];
 
-const SkillCard = ({ name, icon, index }) => (
+const SkillCard = ({ name, icon, mono, index }) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.45, delay: index * 0.06 }}
     whileHover={{ y: -6, scale: 1.02 }}
-    className="group relative bg-white/5 border border-white/10 rounded-2xl p-5 flex flex-col items-center gap-3 hover:border-pink-500/50 hover:bg-white/8 transition-all duration-300 cursor-default"
+    className="group relative bg-white dark:bg-white/5 border border-zinc-200 dark:border-white/10 rounded-2xl p-5 flex flex-col items-center gap-3 hover:border-pink-500/50 shadow-sm dark:shadow-none hover:bg-zinc-50 dark:hover:bg-white/8 transition-all duration-300 cursor-default"
   >
     <img
       src={icon}
       alt={name}
-      className="w-14 h-14 object-contain group-hover:scale-110 transition-transform duration-300"
+      className={`w-14 h-14 object-contain ${mono ? "dark:invert" : ""} group-hover:scale-110 transition-transform duration-300`}
     />
-    <p className="text-zinc-300 text-sm font-semibold tracking-wide text-center">{name}</p>
+    <p className="text-zinc-700 dark:text-zinc-300 text-sm font-semibold tracking-wide text-center">{name}</p>
   </motion.div>
 );
 
@@ -76,13 +76,13 @@ const Skills = () => {
           <span className="text-pink-500 text-sm font-mono tracking-widest uppercase">
             03.
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-white">
+          <h2 className="text-4xl sm:text-5xl font-black text-zinc-900 dark:text-white">
             Tech{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-400">
               Stack
             </span>
           </h2>
-          <div className="flex-1 h-[1px] bg-gradient-to-r from-zinc-700 to-transparent" />
+          <div className="flex-1 h-[1px] bg-gradient-to-r from-zinc-300 dark:from-zinc-700 to-transparent" />
         </motion.div>
 
         <motion.p
@@ -130,7 +130,7 @@ const Skills = () => {
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="text-xs uppercase tracking-[0.3em] text-zinc-400 font-medium mb-5 mt-12"
+          className="text-xs uppercase tracking-[0.3em] text-zinc-600 dark:text-zinc-400 font-medium mb-5 mt-12"
         >
           Also work with
         </motion.h3>
@@ -144,7 +144,7 @@ const Skills = () => {
           {otherTools.map((tool) => (
             <span
               key={tool}
-              className="rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs text-zinc-300 hover:border-pink-500/50 hover:text-white transition-colors"
+              className="rounded-full border border-zinc-200 dark:border-white/10 bg-white dark:bg-white/5 px-3.5 py-1.5 text-xs text-zinc-700 dark:text-zinc-300 hover:border-pink-500/50 hover:text-zinc-900 dark:hover:text-white transition-colors"
             >
               {tool}
             </span>

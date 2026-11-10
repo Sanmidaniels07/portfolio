@@ -65,7 +65,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="text-5xl sm:text-7xl font-black text-white leading-none tracking-tight mb-3"
+              className="text-5xl sm:text-7xl font-black text-zinc-900 dark:text-white leading-none tracking-tight mb-3"
             >
               DANIEL
               <br />
@@ -78,7 +78,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.5 }}
-              className="flex items-center gap-2 text-2xl sm:text-3xl font-bold text-zinc-300 mb-6 h-10"
+              className="flex items-center gap-2 text-2xl sm:text-3xl font-bold text-zinc-700 dark:text-zinc-300 mb-6 h-10"
             >
               <span>{displayed}</span>
               <span className="w-[2px] h-8 bg-pink-500 animate-pulse" />
@@ -88,7 +88,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.65 }}
-              className="text-zinc-400 text-base sm:text-lg max-w-[520px] leading-relaxed mb-10"
+              className="text-zinc-600 dark:text-zinc-400 text-base sm:text-lg max-w-[520px] leading-relaxed mb-10"
             >
               I build pixel-perfect, performant interfaces that users love — from
               sleek frontends to robust full-stack architectures. Passionate about
@@ -108,7 +108,7 @@ const Home = () => {
                 </button>
               </Link>
               <Link to="contact" smooth duration={500}>
-                <button className="flex items-center gap-3 px-7 py-3.5 border border-zinc-600 text-zinc-300 font-semibold text-sm uppercase tracking-wider rounded-full hover:border-pink-500 hover:text-pink-400 transition-all duration-300">
+                <button className="flex items-center gap-3 px-7 py-3.5 border border-zinc-300 dark:border-zinc-600 text-zinc-700 dark:text-zinc-300 font-semibold text-sm uppercase tracking-wider rounded-full hover:border-pink-500 hover:text-pink-400 transition-all duration-300">
                   Let's Talk
                 </button>
               </Link>
@@ -130,7 +130,7 @@ const Home = () => {
                   key={cv.label}
                   href={cv.href}
                   download
-                  className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-2 font-medium text-zinc-300 hover:border-pink-500/60 hover:text-pink-300 transition-colors"
+                  className="flex items-center gap-1.5 rounded-full border border-zinc-200 dark:border-white/10 bg-white dark:bg-white/5 px-4 py-2 font-medium text-zinc-700 dark:text-zinc-300 hover:border-pink-500/60 hover:text-pink-300 transition-colors"
                 >
                   <HiOutlineDownload size={15} /> {cv.label}
                 </a>
@@ -159,19 +159,19 @@ const Home = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1.2 }}
-                className="absolute -right-4 top-8 bg-[#1a1a1a] border border-white/10 rounded-xl px-3 py-2 text-center shadow-xl backdrop-blur"
+                className="absolute -right-4 top-8 bg-white dark:bg-[#1a1a1a] border border-zinc-200 dark:border-white/10 rounded-xl px-3 py-2 text-center shadow-xl backdrop-blur"
               >
-                <p className="text-pink-400 font-black text-lg leading-none">4+</p>
-                <p className="text-zinc-400 text-xs mt-0.5">Years Exp.</p>
+                <p className="text-pink-600 dark:text-pink-400 font-black text-lg leading-none">4+</p>
+                <p className="text-zinc-600 dark:text-zinc-400 text-xs mt-0.5">Years Exp.</p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1.4 }}
-                className="absolute -left-4 bottom-8 bg-[#1a1a1a] border border-white/10 rounded-xl px-3 py-2 text-center shadow-xl backdrop-blur"
+                className="absolute -left-4 bottom-8 bg-white dark:bg-[#1a1a1a] border border-zinc-200 dark:border-white/10 rounded-xl px-3 py-2 text-center shadow-xl backdrop-blur"
               >
-                <p className="text-cyan-400 font-black text-lg leading-none">15+</p>
-                <p className="text-zinc-400 text-xs mt-0.5">Projects</p>
+                <p className="text-cyan-600 dark:text-cyan-400 font-black text-lg leading-none">15+</p>
+                <p className="text-zinc-600 dark:text-zinc-400 text-xs mt-0.5">Projects</p>
               </motion.div>
             </div>
           </motion.div>

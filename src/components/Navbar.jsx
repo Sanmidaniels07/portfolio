@@ -11,6 +11,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = ["home", "about", "skills", "work", "contact"];
 
@@ -25,7 +26,7 @@ const socials = [
     label: "GitHub",
     icon: <FaGithub size={22} />,
     href: "https://github.com/Sanmidaniels07",
-    color: "from-zinc-700 to-zinc-600",
+    color: "from-zinc-800 to-zinc-600",
   },
   {
     label: "Twitter",
@@ -72,14 +73,14 @@ const Navbar = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`fixed w-full z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-[#0d0d0d]/80 backdrop-blur-xl border-b border-white/5 shadow-lg shadow-black/30"
+            ? "bg-white/80 dark:bg-[#0d0d0d]/80 backdrop-blur-xl border-b border-zinc-200 dark:border-white/5 shadow-lg shadow-zinc-300/30 dark:shadow-black/30"
             : "bg-transparent"
         }`}
       >
         <div className="max-w-6xl mx-auto px-6 h-[72px] flex items-center justify-between">
           <motion.div
             whileHover={{ scale: 1.04 }}
-            className="text-white font-bold text-lg tracking-widest uppercase"
+            className="text-zinc-900 dark:text-white font-bold text-lg tracking-widest uppercase"
           >
             <span className="text-pink-500">&lt;</span>
             Daniel
@@ -87,7 +88,8 @@ const Navbar = () => {
           </motion.div>
 
           {/* Desktop nav */}
-          <ul className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8">
+          <ul className="flex items-center gap-8">
             {navLinks.map((item) => (
               <li key={item}>
                 <Link
@@ -96,7 +98,7 @@ const Navbar = () => {
                   duration={500}
                   spy
                   onSetActive={() => setActiveSection(item)}
-                  className="relative text-sm uppercase tracking-widest text-zinc-400 hover:text-white cursor-pointer transition-colors duration-300 group"
+                  className="relative text-sm uppercase tracking-widest text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white cursor-pointer transition-colors duration-300 group"
                 >
                   {item}
                   <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gradient-to-r from-pink-500 to-cyan-400 group-hover:w-full transition-all duration-300" />
@@ -104,11 +106,16 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          <ThemeToggle />
+          </div>
 
-          {/* Hamburger */}
+          {/* Mobile: theme toggle + hamburger */}
+          <div className="md:hidden flex items-center gap-2 z-50">
+          <ThemeToggle />
           <button
             onClick={() => setToggle(!toggle)}
-            className="md:hidden text-white z-50 p-2"
+            aria-label={toggle ? "Close menu" : "Open menu"}
+            className="text-zinc-900 dark:text-white p-2"
           >
             <AnimatePresence mode="wait">
               {toggle ? (
@@ -134,6 +141,7 @@ const Navbar = () => {
               )}
             </AnimatePresence>
           </button>
+          </div>
         </div>
       </motion.nav>
 
@@ -145,7 +153,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.35, ease: "easeOut" }}
-            className="fixed inset-0 z-40 bg-[#0d0d0d]/95 backdrop-blur-2xl flex flex-col justify-center items-center"
+            className="fixed inset-0 z-40 bg-white/95 dark:bg-[#0d0d0d]/95 backdrop-blur-2xl flex flex-col justify-center items-center"
           >
             <ul className="flex flex-col items-center gap-8">
               {navLinks.map((item, i) => (
@@ -160,7 +168,7 @@ const Navbar = () => {
                     smooth
                     duration={500}
                     onClick={() => setToggle(false)}
-                    className="text-4xl font-bold uppercase tracking-widest text-zinc-300 hover:text-pink-400 transition-colors duration-200 cursor-pointer"
+                    className="text-4xl font-bold uppercase tracking-widest text-zinc-700 dark:text-zinc-300 hover:text-pink-600 dark:hover:text-pink-400 transition-colors duration-200 cursor-pointer"
                   >
                     {item}
                   </Link>

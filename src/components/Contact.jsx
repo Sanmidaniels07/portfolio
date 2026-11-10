@@ -8,9 +8,9 @@ const Contact = () => {
   const [sent, ] = useState(false);
 
   const inputClass = (name) =>
-    `w-full bg-white/5 border ${
-      focused === name ? "border-pink-500/80" : "border-white/10"
-    } rounded-xl px-4 py-3.5 text-white placeholder-zinc-600 text-sm outline-none transition-all duration-300 focus:bg-white/8`;
+    `w-full bg-white dark:bg-white/5 border ${
+      focused === name ? "border-pink-500/80" : "border-zinc-200 dark:border-white/10"
+    } rounded-xl px-4 py-3.5 text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-600 text-sm outline-none shadow-sm dark:shadow-none transition-all duration-300 dark:focus:bg-white/8`;
 
   return (
     <div name="contact" className="w-full py-24 relative overflow-hidden">
@@ -26,10 +26,10 @@ const Contact = () => {
           className="flex items-center gap-4 mb-4"
         >
           <span className="text-pink-500 text-sm font-mono tracking-widest uppercase">05.</span>
-          <h2 className="text-4xl sm:text-5xl font-black text-white">
+          <h2 className="text-4xl sm:text-5xl font-black text-zinc-900 dark:text-white">
             Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-400">Touch</span>
           </h2>
-          <div className="flex-1 h-[1px] bg-gradient-to-r from-zinc-700 to-transparent" />
+          <div className="flex-1 h-[1px] bg-gradient-to-r from-zinc-300 dark:from-zinc-700 to-transparent" />
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 mt-14">
@@ -40,8 +40,8 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-bold text-white mb-4">Let's build something great together.</h3>
-            <p className="text-zinc-400 leading-relaxed mb-8">
+            <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mb-4">Let's build something great together.</h3>
+            <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-8">
               Whether you have a project in mind, want to collaborate, or just want
               to say hi — my inbox is always open. I'll do my best to get back to
               you promptly.
@@ -50,7 +50,7 @@ const Contact = () => {
             <div className="space-y-4">
               <a
                 href="mailto:sanmidaniels07@gmail.com"
-                className="flex items-center gap-3 text-zinc-300 hover:text-pink-400 transition-colors text-sm group"
+                className="flex items-center gap-3 text-zinc-700 dark:text-zinc-300 hover:text-pink-600 dark:hover:text-pink-400 transition-colors text-sm group"
               >
                 <HiOutlineMail className="text-pink-500 group-hover:scale-110 transition-transform" size={20} />
                 sanmidaniels07@gmail.com
@@ -59,7 +59,7 @@ const Contact = () => {
                 href="https://wa.me/2348138580959?text=Hi%20Daniel%2C%20I%20saw%20your%20portfolio"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-3 text-zinc-300 hover:text-green-400 transition-colors text-sm group"
+                className="flex items-center gap-3 text-zinc-700 dark:text-zinc-300 hover:text-green-600 dark:hover:text-green-400 transition-colors text-sm group"
               >
                 <FaWhatsapp className="text-green-500 group-hover:scale-110 transition-transform" size={20} />
                 WhatsApp: 0813 858 0959
@@ -78,7 +78,7 @@ const Contact = () => {
                   href={s.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-zinc-400 hover:border-pink-500/50 hover:text-pink-400 transition-all duration-300 hover:scale-110"
+                  className="w-10 h-10 rounded-full border border-zinc-200 dark:border-white/10 flex items-center justify-center text-zinc-600 dark:text-zinc-400 hover:border-pink-500/50 hover:text-pink-600 dark:hover:text-pink-400 transition-all duration-300 hover:scale-110"
                 >
                   {s.icon}
                 </a>
@@ -102,8 +102,8 @@ const Contact = () => {
                 <div className="w-16 h-16 rounded-full bg-gradient-to-br from-pink-600 to-rose-500 flex items-center justify-center text-white text-2xl">
                   ✓
                 </div>
-                <h4 className="text-white font-bold text-xl">Message Sent!</h4>
-                <p className="text-zinc-400 text-sm">Thanks for reaching out. I'll be in touch soon.</p>
+                <h4 className="text-zinc-900 dark:text-white font-bold text-xl">Message Sent!</h4>
+                <p className="text-zinc-600 dark:text-zinc-400 text-sm">Thanks for reaching out. I'll be in touch soon.</p>
               </motion.div>
             ) : (
               <form
@@ -162,9 +162,9 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="text-center mt-24 pt-8 border-t border-white/5"
+          className="text-center mt-24 pt-8 border-t border-zinc-200 dark:border-white/5"
         >
-          <p className="text-zinc-600 text-xs">
+          <p className="text-zinc-500 dark:text-zinc-600 text-xs">
             <span className="text-pink-500 font-medium">Daniel Sanmi Omowole</span> · {new Date().getFullYear()}
           </p>
         </motion.div>

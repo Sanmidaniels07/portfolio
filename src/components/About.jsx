@@ -30,13 +30,13 @@ const About = () => {
           <span className="text-pink-500 text-sm font-mono tracking-widest uppercase">
             02.
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-white">
+          <h2 className="text-4xl sm:text-5xl font-black text-zinc-900 dark:text-white">
             About{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-400">
               Me
             </span>
           </h2>
-          <div className="flex-1 h-[1px] bg-gradient-to-r from-zinc-700 to-transparent" />
+          <div className="flex-1 h-[1px] bg-gradient-to-r from-zinc-300 dark:from-zinc-700 to-transparent" />
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -46,10 +46,10 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-2xl sm:text-3xl font-bold text-white leading-snug mb-6"
+              className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white leading-snug mb-6"
             >
               I turn ideas into{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-500 dark:from-pink-400 dark:to-rose-400">
                 exceptional digital experiences.
               </span>
             </motion.h3>
@@ -59,7 +59,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-zinc-400 text-base leading-relaxed mb-5"
+              className="text-zinc-600 dark:text-zinc-400 text-base leading-relaxed mb-5"
             >
               Hey, I'm Daniel — a Full-Stack Software Engineer who lives at the
               intersection of clean code and stunning interfaces. I started as a
@@ -73,7 +73,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-zinc-400 text-base leading-relaxed mb-8"
+              className="text-zinc-600 dark:text-zinc-400 text-base leading-relaxed mb-8"
             >
               My backend experience means I understand how everything fits
               together — from API design to database schemas — so I can
@@ -102,7 +102,7 @@ const About = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.4 + i * 0.08, duration: 0.4 }}
-                  className="flex items-center gap-3 text-zinc-300 text-sm"
+                  className="flex items-center gap-3 text-zinc-700 dark:text-zinc-300 text-sm"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-pink-500 to-cyan-400 flex-shrink-0" />
                   {item}
@@ -122,12 +122,12 @@ const About = () => {
               {stats.map((s, i) => (
                 <div
                   key={i}
-                  className="bg-white/5 border border-white/10 rounded-2xl p-5 text-center backdrop-blur hover:border-pink-500/40 transition-colors duration-300"
+                  className="bg-white dark:bg-white/5 border border-zinc-200 dark:border-white/10 rounded-2xl p-5 text-center backdrop-blur hover:border-pink-500/40 transition-colors duration-300"
                 >
                   <p className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-rose-500">
                     {s.value}
                   </p>
-                  <p className="text-zinc-400 text-xs mt-1 leading-tight">
+                  <p className="text-zinc-600 dark:text-zinc-400 text-xs mt-1 leading-tight">
                     {s.label}
                   </p>
                 </div>
@@ -139,15 +139,15 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur p-8"
+              className="relative rounded-2xl overflow-hidden border border-zinc-200 dark:border-white/10 bg-white dark:bg-white/5 backdrop-blur p-8"
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-600 via-rose-400 to-cyan-500" />
-              <p className="text-zinc-300 text-sm font-mono text-center mb-1 text-pink-400">
+              <p className="text-sm font-mono text-center mb-1 text-pink-600 dark:text-pink-400">
                 {"// philosophy"}
               </p>
-              <p className="text-white text-lg font-bold text-center leading-snug">
+              <p className="text-zinc-900 dark:text-white text-lg font-bold text-center leading-snug">
                 "Great software is never just functional — it's{" "}
-                <span className="text-pink-400">delightful</span>."
+                <span className="text-pink-600 dark:text-pink-400">delightful</span>."
               </p>
               <p className="text-zinc-500 text-sm text-center mt-3">
                 I believe every interaction is an opportunity to make someone's

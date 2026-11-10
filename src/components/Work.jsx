@@ -29,10 +29,10 @@ const Work = () => {
           className="flex items-center gap-4 mb-4"
         >
           <span className="text-pink-500 text-sm font-mono tracking-widest uppercase">04.</span>
-          <h2 className="text-4xl sm:text-5xl font-black text-white">
+          <h2 className="text-4xl sm:text-5xl font-black text-zinc-900 dark:text-white">
             My <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-400">Work</span>
           </h2>
-          <div className="flex-1 h-[1px] bg-gradient-to-r from-zinc-700 to-transparent" />
+          <div className="flex-1 h-[1px] bg-gradient-to-r from-zinc-300 dark:from-zinc-700 to-transparent" />
         </motion.div>
         <motion.p
           initial={{ opacity: 0 }}
@@ -55,7 +55,7 @@ const Work = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
                 whileHover={{ y: -8 }}
-                className="group relative flex flex-col rounded-2xl overflow-hidden border border-white/10 bg-white/5 hover:border-pink-500/40 transition-all duration-400"
+                className="group relative flex flex-col rounded-2xl overflow-hidden border border-zinc-200 dark:border-white/10 bg-white dark:bg-white/5 hover:border-pink-500/40 shadow-sm hover:shadow-xl hover:shadow-zinc-300/50 dark:shadow-none dark:hover:shadow-none transition-all duration-400"
               >
                 {/* Project image */}
                 <div className="relative h-48 overflow-hidden">
@@ -65,7 +65,7 @@ const Work = () => {
                     loading="lazy"
                     className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d0d] via-[#0d0d0d]/60 to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-400" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-40 dark:opacity-60 group-hover:opacity-100 dark:group-hover:opacity-80 transition-opacity duration-400" />
                   {item.badge && (
                     <span className="absolute left-3 top-3 rounded-full bg-pink-600/90 px-3 py-1 text-[11px] font-semibold text-white shadow-lg backdrop-blur">
                       {item.badge}
@@ -95,18 +95,18 @@ const Work = () => {
 
                 {/* Project info */}
                 <div className="flex flex-1 flex-col p-5">
-                  <h3 className="text-white font-bold text-base mb-1 group-hover:text-pink-400 transition-colors">
+                  <h3 className="text-zinc-900 dark:text-white font-bold text-base mb-1 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors">
                     {item.name}
                   </h3>
                   {item.description && (
-                    <p className="text-zinc-400 text-sm leading-relaxed">
+                    <p className="text-zinc-600 dark:text-zinc-400 text-sm leading-relaxed">
                       {item.description}
                     </p>
                   )}
                   {item.stack && (
                     <div className="flex flex-wrap gap-x-3 gap-y-1 mt-3">
                       {item.stack.map((tech, i) => (
-                        <span key={i} className="text-xs text-pink-400/80 font-mono">
+                        <span key={i} className="text-xs text-pink-600 dark:text-pink-400/80 font-mono">
                           {tech}
                         </span>
                       ))}
@@ -125,7 +125,7 @@ const Work = () => {
                           className={`flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-semibold transition-colors ${
                             primary
                               ? "bg-pink-600/90 text-white hover:bg-pink-600"
-                              : "border border-white/15 text-zinc-300 hover:border-pink-500/50 hover:text-white"
+                              : "border border-zinc-300 dark:border-white/15 text-zinc-700 dark:text-zinc-300 hover:border-pink-500/50 hover:text-zinc-900 dark:hover:text-white"
                           }`}
                         >
                           <Icon size={12} /> {label}
