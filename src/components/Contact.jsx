@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { HiOutlineMail } from "react-icons/hi";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaWhatsapp } from "react-icons/fa";
 
 const Contact = () => {
   const [focused, setFocused] = useState(null);
@@ -55,6 +55,15 @@ const Contact = () => {
                 <HiOutlineMail className="text-pink-500 group-hover:scale-110 transition-transform" size={20} />
                 sanmidaniels07@gmail.com
               </a>
+              <a
+                href="https://wa.me/2348138580959?text=Hi%20Daniel%2C%20I%20saw%20your%20portfolio"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-3 text-zinc-300 hover:text-green-400 transition-colors text-sm group"
+              >
+                <FaWhatsapp className="text-green-500 group-hover:scale-110 transition-transform" size={20} />
+                WhatsApp: 0813 858 0959
+              </a>
             </div>
 
             <div className="flex gap-4 mt-10">
@@ -62,6 +71,7 @@ const Contact = () => {
                 { href: "https://github.com/Sanmidaniels07", icon: <FaGithub size={20} /> },
                 { href: "https://www.linkedin.com/in/daniel-omowole-95a978186", icon: <FaLinkedin size={20} /> },
                 { href: "https://twitter.com/O_sanmidaniels", icon: <FaTwitter size={20} /> },
+                { href: "https://wa.me/2348138580959", icon: <FaWhatsapp size={20} /> },
               ].map((s, i) => (
                 <a
                   key={i}

@@ -15,26 +15,33 @@ import Git from "../assets/git.png";
 import Api from "../assets/rest-api.png";
 
 const frontendSkills = [
-  { name: "HTML5", icon: HTML, level: 95 },
-  { name: "CSS3", icon: CSS, level: 95 },
-  { name: "JavaScript", icon: Javascript, level: 95 },
-  { name: "TypeScript", icon: Typescript, level: 95 },
-  { name: "React", icon: ReactImg, level: 95 },
-  { name: "Next.js", icon: Nextjs, level: 95 },
-  { name: "Tailwind", icon: Tailwind, level: 95 },
+  { name: "HTML5", icon: HTML },
+  { name: "CSS3", icon: CSS },
+  { name: "JavaScript", icon: Javascript },
+  { name: "TypeScript", icon: Typescript },
+  { name: "React", icon: ReactImg },
+  { name: "Next.js", icon: Nextjs },
+  { name: "Tailwind", icon: Tailwind },
 ];
 
 const backendSkills = [
-  { name: "Node.js", icon: Node, level: 95 },
-  { name: "Express.js", icon: Express, level: 95 },
-  { name: "PostgreSQL", icon: PostgreSQL, level: 95 },
-  { name: "Prisma ORM", icon: Prisma, level: 95 },
-  { name: "Supabase", icon: Supabase, level: 95 },
-  { name: "REST APIs", icon: Api, level: 95 },
-  { name: "Git", icon: Git, level: 95 },
+  { name: "Node.js", icon: Node },
+  { name: "Express.js", icon: Express },
+  { name: "PostgreSQL", icon: PostgreSQL },
+  { name: "Prisma ORM", icon: Prisma },
+  { name: "Supabase", icon: Supabase },
+  { name: "REST APIs", icon: Api },
+  { name: "Git", icon: Git },
 ];
 
-const SkillCard = ({ name, icon, level, index }) => (
+// Everything else from the CV, as tags.
+const otherTools = [
+  "Redux", "Zustand", "Hookstate", "React Query (TanStack)", "React Native", "Vite", "Framer Motion",
+  "Mantine UI", "Material UI", "Firebase", "JWT Auth", "Role-Based Access Control", "Zod", "Swagger / OpenAPI",
+  "Paystack", "Cloudinary", "Unit & E2E Testing", "CI/CD", "SEO",
+];
+
+const SkillCard = ({ name, icon, index }) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -48,19 +55,7 @@ const SkillCard = ({ name, icon, level, index }) => (
       alt={name}
       className="w-14 h-14 object-contain group-hover:scale-110 transition-transform duration-300"
     />
-    <p className="text-zinc-300 text-sm font-semibold tracking-wide">{name}</p>
-    <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden">
-      <motion.div
-        initial={{ width: 0 }}
-        whileInView={{ width: `${level}%` }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, delay: 0.3 + index * 0.06, ease: "easeOut" }}
-        className="h-full bg-gradient-to-r from-pink-600 to-rose-400 rounded-full"
-      />
-    </div>
-    <span className="absolute top-3 right-3 text-xs text-zinc-600 font-mono group-hover:text-pink-400 transition-colors">
-      {level}%
-    </span>
+    <p className="text-zinc-300 text-sm font-semibold tracking-wide text-center">{name}</p>
   </motion.div>
 );
 
@@ -95,7 +90,7 @@ const Skills = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="text-zinc-500 text-sm mb-14 ml-12"
+          className="text-zinc-500 text-sm mb-14 sm:ml-12"
         >
           Technologies I work with professionally
         </motion.p>
@@ -129,6 +124,32 @@ const Skills = () => {
             <SkillCard key={s.name} {...s} index={i} />
           ))}
         </div>
+
+        {/* Also */}
+        <motion.h3
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className="text-xs uppercase tracking-[0.3em] text-zinc-400 font-medium mb-5 mt-12"
+        >
+          Also work with
+        </motion.h3>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-wrap gap-2.5"
+        >
+          {otherTools.map((tool) => (
+            <span
+              key={tool}
+              className="rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 text-xs text-zinc-300 hover:border-pink-500/50 hover:text-white transition-colors"
+            >
+              {tool}
+            </span>
+          ))}
+        </motion.div>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "5+", label: "Years of Experience" },
+  { value: "4+", label: "Years of Experience" },
   { value: "15+", label: "Projects Delivered" },
   { value: "10+", label: "Technologies" },
 ];
@@ -80,7 +80,7 @@ const About = () => {
               collaborate effectively across the stack and make smarter
               decisions at every layer. I care deeply about performance,
               accessibility, and the small details that make a product feel
-              truly polished.On the frontend, I bring that same engineering
+              truly polished. On the frontend, I bring that same engineering
               rigour to React and Next.js applications — writing TypeScript,
               managing complex state, and integrating APIs seamlessly.
               Understanding both sides of the stack means I make smarter

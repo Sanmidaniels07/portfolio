@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { HiArrowNarrowRight } from "react-icons/hi";
+import { HiArrowNarrowRight, HiOutlineDownload } from "react-icons/hi";
 import profilePix from "../assets/profilepix.png";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
@@ -7,7 +7,7 @@ import { Link } from "react-scroll";
 const roles = [
   "Frontend Engineer",
   "UI/UX Craftsman",
-  "Fullstack Knowledge",
+  "Full-Stack Engineer",
   "React Specialist",
 ];
 
@@ -113,6 +113,29 @@ const Home = () => {
                 </button>
               </Link>
             </motion.div>
+
+            {/* Download a CV - full-stack or frontend */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.95 }}
+              className="mt-5 flex flex-wrap items-center gap-3 text-sm"
+            >
+              <span className="text-zinc-500">Download CV:</span>
+              {[
+                { label: "Full-Stack", href: "/resume/Daniel_Omowole_FullStack_Resume.pdf" },
+                { label: "Frontend", href: "/resume/Daniel_Omowole_Frontend_Resume.pdf" },
+              ].map((cv) => (
+                <a
+                  key={cv.label}
+                  href={cv.href}
+                  download
+                  className="flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-4 py-2 font-medium text-zinc-300 hover:border-pink-500/60 hover:text-pink-300 transition-colors"
+                >
+                  <HiOutlineDownload size={15} /> {cv.label}
+                </a>
+              ))}
+            </motion.div>
           </div>
 
           {/* Profile Image */}
@@ -138,7 +161,7 @@ const Home = () => {
                 transition={{ delay: 1.2 }}
                 className="absolute -right-4 top-8 bg-[#1a1a1a] border border-white/10 rounded-xl px-3 py-2 text-center shadow-xl backdrop-blur"
               >
-                <p className="text-pink-400 font-black text-lg leading-none">5+</p>
+                <p className="text-pink-400 font-black text-lg leading-none">4+</p>
                 <p className="text-zinc-400 text-xs mt-0.5">Years Exp.</p>
               </motion.div>
               <motion.div
